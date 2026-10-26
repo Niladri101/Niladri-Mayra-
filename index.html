@@ -1,36 +1,276 @@
-<!DOCTYPE html><html lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Niladri Mayra | Portfolio</title>
+  <meta name="description" content="The personal portfolio of Niladri Mayra, a B.Tech CSE student.">
+
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, sans-serif;
-      background: #f4f7fb;
-      color: #222;
-      text-align: center;
-      padding: 50px 20px;
-      margin: 0;
+      background: #f8fafc;
+      color: #1e293b;
+      line-height: 1.7;
     }
-    .card {
-      max-width: 600px;
-      margin: auto;
+
+    header {
       background: white;
-      padding: 35px 20px;
-      border-radius: 16px;
-      box-shadow: 0 4px 18px #0001;
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      box-shadow: 0 2px 12px #00000008;
     }
-    h1 { color: #1769aa; }
-    p { line-height: 1.7; }
+
+    .logo {
+      color: #2563eb;
+      font-size: 21px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    nav a {
+      color: #334155;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #2563eb;
+    }
+
+    .hero {
+      min-height: 420px;
+      padding: 90px 8%;
+      text-align: center;
+      background: linear-gradient(135deg, #eff6ff, #f5f3ff);
+    }
+
+    .hero p:first-child {
+      color: #2563eb;
+      font-weight: bold;
+    }
+
+    h1 {
+      font-size: clamp(34px, 7vw, 54px);
+      line-height: 1.2;
+      margin: 16px 0;
+    }
+
+    .hero h2 {
+      font-size: 23px;
+      color: #475569;
+      font-weight: normal;
+    }
+
+    .hero .intro {
+      max-width: 580px;
+      margin: 18px auto 26px;
+      color: #475569;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      padding: 11px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      margin: 5px;
+    }
+
+    .btn:hover {
+      background: #1d4ed8;
+    }
+
+    section {
+      padding: 65px 8%;
+      scroll-margin-top: 20px;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 30px;
+      margin-bottom: 25px;
+    }
+
+    .about {
+      max-width: 750px;
+      margin: auto;
+      text-align: center;
+      color: #475569;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 14px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 5px 20px #00000005;
+    }
+
+    .card h3 {
+      color: #2563eb;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #64748b;
+    }
+
+    #skills {
+      background: #eff6ff;
+    }
+
+    #contact {
+      text-align: center;
+    }
+
+    #contact p {
+      margin-bottom: 18px;
+      color: #475569;
+    }
+
+    footer {
+      text-align: center;
+      background: #0f172a;
+      color: white;
+      padding: 22px 12px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+      }
+
+      .hero {
+        padding: 65px 6%;
+      }
+
+      section {
+        padding: 48px 6%;
+      }
+    }
   </style>
 </head>
+
 <body>
-  <div class="card">
-    <h1>Hi, I'm Niladri Mayra</h1>
-    <h2>B.Tech CSE Student</h2>
-    <p>Welcome to my personal portfolio website.</p>
-    <p>I am learning programming and web development.</p>
-    <p>My goal is to build useful projects and grow my skills.</p>
-  </div>
-</body><!-- My Portfolio -->
+
+  <header>
+    <div class="logo">Niladri Mayra</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero" id="home">
+      <p>WELCOME TO MY PORTFOLIO</p>
+      <h1>Hi, I'm Niladri Mayra</h1>
+      <h2>B.Tech CSE Student</h2>
+      <p class="intro">
+        I am a first-year Computer Science and Engineering student
+        beginning my journey in technology and web development.
+      </p>
+      <a class="btn" href="#about">Know More</a>
+      <a class="btn" href="#projects">My Projects</a>
+    </div>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p class="about">
+        Hello! I am Niladri Mayra, a first-year B.Tech CSE student.
+        I am interested in learning about computers, programming,
+        and website development. I want to build my knowledge
+        step by step and create useful projects as I learn.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>My Learning Journey</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Web Development</h3>
+          <p>Exploring how websites are created and designed.</p>
+        </div>
+        <div class="card">
+          <h3>Programming</h3>
+          <p>Working towards learning programming fundamentals.</p>
+        </div>
+        <div class="card">
+          <h3>Computer Science</h3>
+          <p>Building my foundation as a CSE student.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>My Projects</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Personal Portfolio</h3>
+          <p>
+            My personal portfolio website, created to introduce
+            myself and share my learning journey.
+          </p>
+          <p><strong>Technology:</strong> HTML and CSS</p>
+        </div>
+        <div class="card">
+          <h3>Future Projects</h3>
+          <p>
+            I plan to add more projects here as I learn new
+            programming and web development skills.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>
+        Thank you for visiting my portfolio.
+        You can add your contact details here later.
+      </p>
+      <a class="btn" href="#home">Back to Top</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Niladri Mayra. All rights reserved.</p>
+  </footer>
+
+</body>
 </html>
