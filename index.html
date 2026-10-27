@@ -4,7 +4,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#101027">
   <meta name="description" content="Niladri Mayra - B.Tech CSE student portfolio.">
-  <title>Niladri Mayra | Portfolio</title>  <style>
+  <title>Niladri Mayra | Portfolio</title>  
+/* Extra premium animations */
+
+.hero {
+  background-size: 200% 200%;
+  animation: gradientFlow 8s ease infinite;
+}
+
+.hero h1 {
+  animation: appear 1.2s ease both;
+}
+
+.btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 10px 28px rgba(129, 140, 248, 0.35);
+}
+
+.card {
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(99, 102, 241, 0.2);
+}
+
+@keyframes gradientFlow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+  
+<style>
     * {
       margin: 0;
       padding: 0;
